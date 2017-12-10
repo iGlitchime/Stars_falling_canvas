@@ -13,7 +13,7 @@
         .canv {
             /*transform: scale(1);*/
             transition: all 200ms ease-in;
-            animation: rolling 10s cubic-bezier(.8,1.5,.2,-1) .1s infinite alternate-reverse;
+            /*animation: rolling 10s cubic-bezier(.8,1.5,.2,-1) .1s infinite alternate-reverse;*/
             /*width: 1200px;*/
             /*height: 650px;*/
             /*border: 4px dashed lightcoral;*/
@@ -27,58 +27,58 @@
             background: black;
             /*border: 4px dashed lightcoral;*/
         }
-        @keyframes rolling {
-            from {
-                background: darkred;
-                /*top: 20px;*/
-                /*left: 20px;*/
-                transform: rotate(-45deg);
-            }
-            13% {
-                background: darkorange;
-            }
-            14% {
-                background: yellow;
-                /*transform: rotate(25deg);*/
-            }
-            25% {
-                /*top: 20px;*/
-                /*left: 600px;*/
-                /*transform: rotate(90deg);*/
-            }
-            28% {
-                background: limegreen;
-            }
-            49% {
-                background: green;
-                /*transform: rotate(150deg);*/
-            }
-            50% {
-                /*top: 300px;*/
-                /*left: 600px;*/
-            }
-            61% {
-                background: lightseagreen;
-                /*transform: rotate(225deg);*/
-            }
-            75% {
-                /*top: 300px;*/
-                /*left: 20px;*/
-                background: cornflowerblue;
-                /*transform: rotate(315deg);*/
-            }
-            87% {
-                background: royalblue;
-            }
-            95% {
-                background: blueviolet;
-            }
-            to {
-                /*top: 20px;*/
-                /*left: 20px;*/
-                /*background: mediumvioletred;*/
-                transform: rotate(500deg);
-            }
+        /*@keyframes rolling {*/
+            /*from {*/
+                /*background: darkred;*/
+                /*/!*top: 20px;*!/*/
+                /*/!*left: 20px;*!/*/
+                /*transform: rotate(-45deg);*/
+            /*}*/
+            /*13% {*/
+                /*background: darkorange;*/
+            /*}*/
+            /*14% {*/
+                /*background: yellow;*/
+                /*/!*transform: rotate(25deg);*!/*/
+            /*}*/
+            /*25% {*/
+                /*/!*top: 20px;*!/*/
+                /*/!*left: 600px;*!/*/
+                /*/!*transform: rotate(90deg);*!/*/
+            /*}*/
+            /*28% {*/
+                /*background: limegreen;*/
+            /*}*/
+            /*49% {*/
+                /*background: green;*/
+                /*/!*transform: rotate(150deg);*!/*/
+            /*}*/
+            /*50% {*/
+                /*/!*top: 300px;*!/*/
+                /*/!*left: 600px;*!/*/
+            /*}*/
+            /*61% {*/
+                /*background: lightseagreen;*/
+                /*/!*transform: rotate(225deg);*!/*/
+            /*}*/
+            /*75% {*/
+                /*/!*top: 300px;*!/*/
+                /*/!*left: 20px;*!/*/
+                /*background: cornflowerblue;*/
+                /*/!*transform: rotate(315deg);*!/*/
+            /*}*/
+            /*87% {*/
+                /*background: royalblue;*/
+            /*}*/
+            /*95% {*/
+                /*background: blueviolet;*/
+            /*}*/
+            /*to {*/
+                /*/!*top: 20px;*!/*/
+                /*/!*left: 20px;*!/*/
+                /*/!*background: mediumvioletred;*!/*/
+                /*transform: rotate(500deg);*/
+            /*}*/
         }
     </style>
 </head>
@@ -94,13 +94,11 @@
 
 
     var ballArray = [];
-    canvas.width = 200;
-    canvas.height = 300;
+    canvas.width = 1200;
+    canvas.height = 700;
 
     //Летающий мячик кот. бьется о рамки
     var Ball = function (color) {
-//        this.x = 100;
-//        this.y = 100;
         this.x = parseFloat(canvas.width);
         this.y = parseFloat(canvas.height);
         this.xSpeed = Math.random() * 10 - 5;
